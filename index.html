@@ -1,0 +1,670 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tovepash</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <style type="text/tailwindcss">
+      @theme {
+        --color-blue: #020182;
+        --color-green: #3bc14a;
+        --color-mainWhite: #ffffff;
+        --color-paragraph: #41423f;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <!-- Header -->
+      <header class="w-[90%] mx-auto flex items-center">
+        <nav class="w-full flex justify-between items-center">
+          <img src="/assets/logo.png" class="w-[18%] lg:w-[6%]" />
+          <div
+            class="w-[30%] flex justify-end items-center font-semibold lg:hidden"
+          >
+            <i
+              id="menu-toggle"
+              class="fa-solid fa-bars cursor-pointer text-xl"
+            ></i>
+          </div>
+          <div
+            id="nav-links"
+            class="hidden lg:flex w-[40%] justify-between items-center text-lg"
+          >
+            <a href="/" class="hover:text-green">Home</a>
+            <a href="#about" class="hover:text-green">About Us</a>
+            <a href="#enterprise" class="hover:text-green">Our Enterprise</a>
+            <a href="#contact" class="hover:text-green">Contact Us</a>
+          </div>
+        </nav>
+      </header>
+      <!-- Mobile Navigation Menu -->
+      <div
+        id="mobile-nav"
+        class="hidden lg:hidden p-4 rounded-lg shadow-lg mt-4 border border-gray-200 mobile-nav"
+      >
+        <a href="/" class="block mb-4 hover:text-orange font-semibold">Home</a>
+        <a href="#about" class="block mb-4 hover:text-orange font-semibold"
+          >About Us</a
+        >
+        <a href="#enterprise" class="block mb-4 hover:text-orange font-semibold"
+          >Our Enterprise</a
+        >
+        <a href="#contact" class="block mb-4 hover:text-orange font-semibold"
+          >Contact Us</a
+        >
+      </div>
+
+      <!-- Hero Section -->
+      <section class="relative h-screen">
+        <div
+          class="absolute inset-0 bg-cover bg-center w-full h-[618px] bg-[url('/assets/hero-img.webp')]"
+        >
+          <div
+            class="absolute inset-0 bg-gradient-to-r from-blue via-blue to-transparent opacity-85"
+          ></div>
+
+          <div
+            class="absolute inset-0 flex items-center justify-center text-white"
+          >
+            <div class="w-[90%] mx-auto">
+              <div class="w-full lg:w-[55%]">
+                <h1 class="text-3xl md:text-5xl/15 font-bold">
+                  Welcome to <span class="text-green">Tovepash Enterprise</span>
+                </h1>
+                <p class="text-lg md:text-xl mt-4">
+                  We serve as the gateway to dynamic arms of impact and
+                  innovation representing our commitment to powering progress
+                  and transforming lives.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="hidden md:block w-[75%] absolute left-[13%] bottom-12 mx-auto"
+        >
+          <div class="flex justify-between items-center bg-blue w-full h-32">
+            <div class="w-full flex justify-around">
+              <div
+                class="w-14 h-14 rounded-full bg-[#E6E6F3]/20 flex items-center justify-center"
+              >
+                <div
+                  class="bg-mainWhite w-10 h-10 rounded-full flex items-center justify-center"
+                >
+                  <img src="assets/hicon1.png" class="w-[70%]" />
+                </div>
+              </div>
+              <div
+                class="w-14 h-14 rounded-full bg-[#E6E6F3]/20 flex items-center justify-center"
+              >
+                <div
+                  class="bg-mainWhite w-10 h-10 rounded-full flex items-center justify-center"
+                >
+                  <img src="assets/hicon2.png" class="w-[70%]" />
+                </div>
+              </div>
+              <div
+                class="w-14 h-14 rounded-full bg-[#E6E6F3]/20 flex items-center justify-center"
+              >
+                <div
+                  class="bg-mainWhite w-10 h-10 rounded-full flex items-center justify-center"
+                >
+                  <img src="assets/hicon3.png" class="w-[70%]" />
+                </div>
+              </div>
+              <div
+                class="w-14 h-14 rounded-full bg-[#E6E6F3]/20 flex items-center justify-center"
+              >
+                <div
+                  class="bg-mainWhite w-10 h-10 rounded-full flex items-center justify-center"
+                >
+                  <img src="assets/hicon4.png" class="w-[70%]" />
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="w-full flex justify-between items-center mt-4">
+            <div class="text-center">
+              <p class="text-xl text-blue font-medium mb-2">Synergy</p>
+              <p class="text-base">
+                Unifying business and philanthropy under one enterprise.
+              </p>
+            </div>
+            <div class="text-center">
+              <p class="text-xl text-blue font-medium mb-2">Innovation</p>
+              <p class="text-base">
+                Supporting clean energy solutions through Tovero Energy.
+              </p>
+            </div>
+            <div class="text-center">
+              <p class="text-xl text-blue font-medium mb-2">Sustainability</p>
+              <p class="text-base">
+                Promoting long-term impact in every initiative.
+              </p>
+            </div>
+            <div class="text-center">
+              <p class="text-xl text-blue font-medium mb-2">Partnership</p>
+              <p class="text-base">
+                Building bridges between industries, communities, and hearts.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="md:hidden w-full h-96 mx-auto absolute -bottom-36">
+          <div class="w-full flex gap-3">
+            <div class="flex justify-between items-center bg-blue w-[20%] py-6">
+              <div
+                class="w-full flex flex-col gap-6 justify-center items-center"
+              >
+                <div
+                  class="w-14 h-14 rounded-full bg-[#E6E6F3]/20 flex items-center justify-center"
+                >
+                  <div
+                    class="bg-mainWhite w-10 h-10 rounded-full flex items-center justify-center"
+                  >
+                    <img src="assets/hicon1.png" class="w-[70%]" />
+                  </div>
+                </div>
+                <div
+                  class="w-14 h-14 rounded-full bg-[#E6E6F3]/20 flex items-center justify-center"
+                >
+                  <div
+                    class="bg-mainWhite w-10 h-10 rounded-full flex items-center justify-center"
+                  >
+                    <img src="assets/hicon2.png" class="w-[70%]" />
+                  </div>
+                </div>
+                <div
+                  class="w-14 h-14 rounded-full bg-[#E6E6F3]/20 flex items-center justify-center"
+                >
+                  <div
+                    class="bg-mainWhite w-10 h-10 rounded-full flex items-center justify-center"
+                  >
+                    <img src="assets/hicon3.png" class="w-[70%]" />
+                  </div>
+                </div>
+                <div
+                  class="w-14 h-14 rounded-full bg-[#E6E6F3]/20 flex items-center justify-center"
+                >
+                  <div
+                    class="bg-mainWhite w-10 h-10 rounded-full flex items-center justify-center"
+                  >
+                    <img src="assets/hicon4.png" class="w-[70%]" />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="w-full flex flex-col justify-between items-center py-6">
+              <div class="w-full">
+                <p class="text-lg md:text-xl text-blue font-medium">
+                  Synergy:
+                  <span class="text-sm"
+                    >Unifying business and philanthropy under one
+                    enterprise</span
+                  >
+                </p>
+              </div>
+              <div class="w-full">
+                <p class="text-lg md:text-xl text-blue font-medium">
+                  Innovation:
+                  <span class="text-sm"
+                    >Supporting clean energy solutions through Tovero
+                    Energy.</span
+                  >
+                </p>
+              </div>
+              <div class="w-full">
+                <p class="text-lg md:text-xl text-blue font-medium">
+                  Sustainability:
+                  <span class="text-sm"
+                    >Promoting long-term impact in every initiative.</span
+                  >
+                </p>
+              </div>
+              <div class="w-full">
+                <p class="text-lg md:text-xl text-blue font-medium">
+                  Partnership:
+                  <span class="text-sm"
+                    >Building bridges between industries, communities, and
+                    hearts.</span
+                  >
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Our BUsiness -->
+      <section id="about" class="scroll-animate w-[90%] mx-auto pt-32 md:py-20">
+        <div class="flex flex-col lg:flex-row items-center justify-between gap-6">
+          <div class="w-full lg:w-[50%]">
+            <p class="text-3xl md:text-4xl text-blue font-bold mb-5 md:mb-8">Our Businesses</p>
+            <p class="md:text-lg text-paragraph mb-8">
+              Tovepash Enterprises operates across multiple sectors to drive
+              sustainable growth, innovation, and social transformation.
+            </p>
+            <p class="font-medium text-xl text-[#12130F] mb-6">Core Sectors:</p>
+
+            <div class="flex items-end">
+              <div
+                id="sectors-container"
+                class="grid grid-cols-3 lg:grid-cols-4 gap-4"
+              ></div>
+              <!-- <p class="text-nowrap mb-4">and more...</p> -->
+            </div>
+          </div>
+          <div class="w-full lg:w-[45%]">
+            <img src="assets/sctn2img.webp" class="rounded-lg" />
+          </div>
+        </div>
+      </section>
+
+      <!-- Coonecting Innovation -->
+      <section id="enterprise" class="scroll-animate w-[90%] mx-auto py-10 md:py-20">
+        <p class="w-full md:w-[50%] text-3xl md:text-4xl/15 text-blue font-bold mb-8">
+          Connecting Innovation with Impact through
+          <span class="text-green">Tovepash Enterprises</span>
+        </p>
+        <div class="flex flex-col md:flex-row gap-4 md:text-lg">
+          <p>
+            Tovepash Enterprises is the central hub connecting our
+            mission-driven organizations. We exist to connect sustainable energy
+            with social impact through Tovero Energy and transforming lives
+            through the Veronica Anthony Foundation.
+          </p>
+          <p>
+            We are the unifying force behind innovation and compassion. Our
+            enterprise exists to amplify the mission of energy solutions and
+            humanitarian efforts—ensuring every step we take is toward a
+            brighter, more empowered future.
+          </p>
+        </div>
+        <br />
+        <br />
+        <div class="flex flex-col md:flex-row items-center justify-between gap-6">
+          <div
+            class="relative w-full md:w-[50%] h-[632px] bg-cover bg-center bg-[url('/assets/sctn2img.webp')] rounded-lg"
+          >
+            <div
+              class="w-[46%] absolute right-4 bottom-4 bg-mainWhite rounded-lg py-5 px-3"
+            >
+              <div class="flex gap-3 items-center mb-3">
+                <div
+                  class="flex items-center justify-center gap-2 bg-blue w-7.5 h-7.5 rounded-full"
+                >
+                  <i class="fa-regular fa-eye text-mainWhite"></i>
+                </div>
+                <p class="text-blue text-xl font-medium">Our Vision</p>
+              </div>
+              <p class="text-sm md:text-base text-[#60615E]">
+                To empower futures through sustainable energy solutions.
+              </p>
+            </div>
+          </div>
+          <div class="md:w-[46%]">
+            <p class="text-3xl/11 text-blue font-bold mb-4">
+              Healing Earth, Solving Carbon Problems With
+              <span class="text-green">Tovero Energy</span>
+            </p>
+            <p class="text-paragraph text-base/10 mb-4">
+              Tovero Energy is a world-class provider of clean and sustainable
+              energy solutions and engineering services. With operations in
+              Nigeria and Sierra Leone, Tovero energy is committed to empowering
+              futures by spearheading initiatives and research aimed at
+              developing resilient energy systems capable of meeting the growing
+              demand for energy while prioritizing sustainability, quality,
+              cleanliness, safe access and affordability
+            </p>
+            <div>
+              <p class="text-[#12130F] text-xl font-medium mb-6">
+                Our Services at Tovero Energy
+              </p>
+              <div class="grid lg:grid-cols-2 gap-y-6 gap-x-4">
+                <div class="flex items-center gap-5">
+                  <i class="fa-regular fa-circle-check text-green"></i>
+                  <p>Engineering Services</p>
+                </div>
+                <div class="flex items-center gap-5">
+                  <i class="fa-regular fa-circle-check text-green"></i>
+                  <p>Solar Energy Systems Design & Installation</p>
+                </div>
+                <div class="flex items-center gap-5">
+                  <i class="fa-regular fa-circle-check text-green"></i>
+                  <p>Construction & Installation</p>
+                </div>
+                <div class="flex items-center gap-5">
+                  <i class="fa-regular fa-circle-check text-green"></i>
+                  <p>Energy Management & Advisory Services</p>
+                </div>
+              </div>
+            </div>
+            <br />
+            <a href="https://toveroenergy.com" class="text-blue">
+              Learn More <i class="fa-solid fa-arrow-right text-green"></i>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- Get in Touch -->
+      <section class="scroll-animate pt-16">
+        <div class="flex flex-col md:flex-row">
+          <div
+            class="md:w-[60%] bg-gradient-to-b from-[#010037] to-blue py-4 px-6"
+          >
+            <div class="md:w-[90%] mx-auto text-mainWhite">
+              <p class="text-xl md:text-2xl font-bold mb-4">
+                Connecting You to Purpose and Possibility
+              </p>
+              <p class="md:text-lg">
+                Whether you're interested in sustainable energy, social impact,
+                or meaningful partnerships, we're here to listen, support, and
+                collaborate.
+              </p>
+            </div>
+          </div>
+          <div
+            class="w-1/2 md:w-[20%] bg-green flex items-center justify-center text-mainWhite py-4 md:py-0"
+          >
+            <a href="#contact" class="text-lg md:text-2xl border-b-3 border-blue">
+              Get In Touch
+              <i class="fa-solid fa-arrow-right text-mainWhite"></i>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- Veronica Foundation -->
+      <section class="scroll-animate bg-[#F6FAFB]">
+        <section class="w-[90%] mx-auto py-10 md:py-20">
+          <div class="flex flex-col md:flex-row items-center justify-between gap-6">
+            <div class="md:w-[50%]">
+              <p class="text-3xl/11 text-blue font-bold mb-4">
+                Veronica Anthony
+                <span class="text-green">Foundation</span>
+              </p>
+              <p class="text-paragraph text-base/10 mb-4">
+                The Veronica Anthony Foundation is dedicated to creating lasting
+                positive change in communities through climate action,
+                education, health initiatives, and sustainable development.
+              </p>
+              <div>
+                <p class="text-[#12130F] text-xl font-medium mb-6">
+                  Our Programs
+                </p>
+                <div class="grid lg:grid-cols-2 gap-y-8 gap-x-4">
+                  <div class="flex items-center gap-8">
+                    <i class="fa-regular fa-circle-check text-green"></i>
+                    <p>Women & Youth Empowerment</p>
+                  </div>
+                  <div class="flex items-center gap-8">
+                    <i class="fa-regular fa-circle-check text-green"></i>
+                    <p>Energy Advocacy & Education</p>
+                  </div>
+                  <div class="flex items-center gap-8">
+                    <i class="fa-regular fa-circle-check text-green"></i>
+                    <p>Productive use of Renewable Energy</p>
+                  </div>
+                  <div class="flex items-center gap-8">
+                    <i class="fa-regular fa-circle-check text-green"></i>
+                    <p>Climate Action</p>
+                  </div>
+                </div>
+              </div>
+              <br />
+              <br />
+              <a href="https://veronicaanthonyfoundation.org/" class="text-blue">
+                Learn More <i class="fa-solid fa-arrow-right text-green"></i>
+              </a>
+            </div>
+            <div
+              class="relative w-full md:w-[50%] h-[632px] bg-cover bg-center bg-[url('/assets/sctn2img.webp')] rounded-lg"
+            >
+              <div
+                class="w-3/4 md:w-[50%] absolute right-4 bottom-4 bg-mainWhite rounded-lg py-5 px-3"
+              >
+                <div class="flex gap-3 items-center mb-3">
+                  <div
+                    class="flex items-center justify-center gap-2 bg-blue w-7.5 h-7.5 rounded-full"
+                  >
+                    <i class="fa-regular fa-eye text-mainWhite"></i>
+                  </div>
+                  <p class="text-blue text-xl font-medium">Our Vision</p>
+                </div>
+                <p class="text-sm md:text-base text-[#60615E]">
+                  To build empowered individuals, thriving communities, and a
+                  sustainable environment that collectively ensures a brighter
+                  future for generations to come.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+      </section>
+
+      <!-- Contact Us -->
+      <section id="contact" class="scroll-animate w-[90%] mx-auto py-20 flex flex-col lg:flex-row justify-between gap-6">
+        <div
+          class="lg:w-[40%] bg-gradient-to-b from-[#010037] to-blue py-7 px-8 text-mainWhite rounded-2xl"
+        >
+          <p class="text-3xl mb-6 text-center">Get in Touch</p>
+          <p class="text-center text-lg mb-10">
+            Have questions or want to speak directly? We’re happy to help
+          </p>
+
+          <div class="flex flex-col gap-8">
+            <div>
+              <div class="flex gap-6 mb-2">
+                <div
+                  class="w-7 h-7 bg-white rounded-full flex items-center justify-center"
+                >
+                  <i class="fa-solid fa-phone-volume text-blue"></i>
+                </div>
+                <p class="text-xl">Call Us</p>
+              </div>
+              <p class="text-green">+234 803 764 1860</p>
+            </div>
+            <div>
+              <div class="flex gap-6 mb-2">
+                <div
+                  class="w-7 h-7 bg-white rounded-full flex items-center justify-center"
+                >
+                  <i class="fa-regular fa-envelope text-blue"></i>
+                </div>
+                <p class="text-xl">Send Us a Mail</p>
+              </div>
+              <p class="text-green">Info@tovepashenterprise.com</p>
+            </div>
+            <div>
+              <div class="flex gap-6 mb-2">
+                <div
+                  class="w-7 h-7 bg-white rounded-full flex items-center justify-center"
+                >
+                  <i class="fa-solid fa-location-dot text-blue"></i>
+                </div>
+                <p class="text-xl">Visit Our Office</p>
+              </div>
+              <p class="text-green mb-3">
+                4 Pius Chuku Close, off Eze Nvuigwe Avenue, Woji, Port Harcourt,
+                Rivers State, Nigeria.
+              </p>
+              <p class="text-green">
+                Seirra Leone address: No 30 FAO drive, Aberdeen, Freetown
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="md:w-[55%] bg-white rounded-lg border border-[#E6E6F3] py-8 px-8"
+        >
+          <h1 class="text-2xl font-semibold text-blue mb-8">Send A Message</h1>
+
+          <form>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+              <div>
+                <label
+                  for="firstName"
+                  class="block text-[#0D1821] font-medium mb-2"
+                  >First Name</label
+                >
+                <input
+                  type="text"
+                  id="firstName"
+                  placeholder="Enter your first name"
+                  class="w-full px-4 py-3 border border-gray-200 rounded-md focus:outline-none focus:ring-2 focus:blue"
+                />
+              </div>
+
+              <div>
+                <label
+                  for="lastName"
+                  class="block text-[#0D1821] font-medium mb-2"
+                  >Last Name</label
+                >
+                <input
+                  type="text"
+                  id="lastName"
+                  placeholder="Enter your last name"
+                  class="w-full px-4 py-3 border border-gray-200 rounded-md focus:outline-none focus:ring-2 focus:blue"
+                />
+              </div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+              <div>
+                <label for="phone" class="block text-[#0D1821] font-medium mb-2"
+                  >Phone Number</label
+                >
+                <input
+                  type="tel"
+                  id="phone"
+                  placeholder="Enter your phone number"
+                  class="w-full px-4 py-3 border border-gray-200 rounded-md focus:outline-none focus:ring-2 focus:blue"
+                />
+              </div>
+
+              <div>
+                <label for="email" class="block text-[#0D1821] font-medium mb-2"
+                  >Email Address</label
+                >
+                <input
+                  type="email"
+                  id="email"
+                  placeholder="Enter your email"
+                  class="w-full px-4 py-3 border border-gray-200 rounded-md focus:outline-none focus:ring-2 focus:blue"
+                />
+              </div>
+            </div>
+
+            <div class="mb-8">
+              <label for="message" class="block text-[#0D1821] font-medium mb-2"
+                >Message</label
+              >
+              <textarea
+                id="message"
+                rows="6"
+                placeholder="How can we help you?"
+                class="w-full px-4 py-3 border border-gray-200 rounded-md focus:outline-none focus:ring-2 focus:blue"
+              ></textarea>
+            </div>
+
+            <button
+              type="submit"
+              class="appearance-none flex items-center gap-2 cursor-pointer bg-transparent border-0 outline-none p-0 text-blue font-medium"
+            >
+              Send Message <i class="fa-solid fa-arrow-right text-green"></i>
+            </button>
+          </form>
+        </div>
+      </section>
+
+      <!-- Footer -->
+      <footer class="relative bg-[#F6FAFB] pt-20 pb-32 flex items-center">
+        <div class="w-[90%] mx-auto flex flex-col lg:flex-row gap-8 md:gap-0">
+          <div class="md:w-1/2">
+            <div class="flex gap-3 items-center mb-4">
+              <img src="assets/logo.png" class="w-[15%] md:w-[10%]" />
+              <p class="text-2xl md:text-3xl font-bold text-blue">
+                Tovepash <span class="text-green">Enterprise</span>
+              </p>
+            </div>
+            <p class="text-paragraph">
+              Proudly connecting innovation and compassion through different
+              platforms
+            </p>
+          </div>
+          <div class="md:w-1/2 flex flex-col lg:flex-row justify-between gap-6 lg:gap-0">
+            <div class="w-full md:w-[40%]">
+              <p class="text-xl md:text-2xl font-medium mb-6 text-[#12130F]">
+                Quick links
+              </p>
+              <div class="flex flex-col gap-4">
+                <a href="#" class="text-paragraph hover:text-green"
+                  >Tovero Energy</a
+                >
+                <a href="#" class="text-paragraph hover:text-green">
+                  Veronica Anthony Foundation
+                </a>
+                <a href="#" class="text-paragraph hover:text-green"
+                  >Publications</a
+                >
+                <a href="#" class="text-paragraph hover:text-green"
+                  >Contact Us</a
+                >
+              </div>
+            </div>
+            <div class="md:w-[40%]">
+              <p class="text-xl md:text-2xl font-medium mb-6 text-[#12130F]">Follow Us</p>
+              <div class="flex gap-3 mb-4">
+                <div
+                  class="w-6 h-6 rounded-full flex items-center justify-center bg-blue"
+                >
+                  <i class="fa-brands fa-facebook text-mainWhite"></i>
+                </div>
+                <p>Tovepash Enteprises</p>
+              </div>
+              <div class="flex gap-3 mb-4">
+                <div
+                  class="w-6 h-6 rounded-full flex items-center justify-center bg-blue"
+                >
+                  <i class="fa-brands fa-instagram text-mainWhite"></i>
+                </div>
+                <p>Tovepash_enterprise</p>
+              </div>
+              <div class="flex gap-3 mb-4">
+                <div
+                  class="w-6 h-6 rounded-full flex items-center justify-center bg-blue"
+                >
+                  <i class="fa-brands fa-linkedin text-mainWhite"></i>
+                </div>
+                <p>Tovepash Enterprise</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="absolute bottom-0 left-0 w-full bg-blue py-6 flex items-center justify-center"
+        >
+          <p class="text-mainWhite text-sm">
+            &copy; 2024 Tovepash Enterprise. All rights reserved.
+          </p>
+        </div>
+      </footer>
+    </main>
+
+    <script src="app.js"></script>
+  </body>
+</html>

@@ -1,0 +1,32 @@
+@import "tailwindcss";
+
+* {
+  font-family: "Helvetica Neue", sans-serif;
+  /* box-sizing: content-box; */
+}
+
+/* Base styles for animated elements */
+.scroll-animate {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: 
+    opacity 0.8s ease-out,
+    transform 0.8s ease-out;
+}
+
+/* Animate when element enters viewport */
+@media (prefers-reduced-motion: no-preference) {
+  .scroll-animate.animate {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Respect reduced motion preference */
+@media (prefers-reduced-motion: reduce) {
+  .scroll-animate {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}
